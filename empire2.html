@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empire de l'Élu Ultime – Le Site Officiel</title>
+<meta name="description" content="Bienvenue dans l'Empire de l'Élu Ultime ! Explore l'histoire, la puissance, les héros et ton destin glorieux.">
+<style>
+/* Reset et style global */
+* {margin:0;padding:0;box-sizing:border-box;}
+body {font-family: 'Arial', sans-serif; background: linear-gradient(135deg,#0b0c10,#1f2833); color: #ffd700; scroll-behavior: smooth;}
+a {text-decoration:none; color:#ffd700;}
+a:hover {color:#ff4d4d;}
+header {position:sticky;top:0;z-index:1000;background:#1f2833;padding:20px;text-align:center;box-shadow:0 5px 10px #000;}
+header h1 {font-size:2.8rem;text-shadow:0 0 20px #ff0000;}
+nav {display:flex;justify-content:center;background:#0b0c10;}
+nav a {padding:15px 25px;font-weight:bold;transition:0.3s;}
+nav a:hover {text-shadow:0 0 10px #ff4500;}
+section {padding:60px 20px;text-align:center;}
+h2 {font-size:2rem;margin-bottom:20px;text-shadow:0 0 10px #ff0000;}
+p {font-size:1.2rem;line-height:1.6;margin-bottom:20px;}
+.gallery {display:flex;flex-wrap:wrap;justify-content:center;}
+.gallery img {width:250px;margin:10px;border:2px solid #ff0000;border-radius:10px;transition:transform 0.3s, box-shadow 0.3s;}
+.gallery img:hover {transform:scale(1.1);box-shadow:0 0 30px #ff4500;}
+button {padding:15px 30px;font-size:1.2rem;border:none;border-radius:12px;background:#ff0000;color:#fff;cursor:pointer;transition:all 0.3s;margin-top:20px;}
+button:hover {background:#ff4d4d;transform:scale(1.1);box-shadow:0 0 30px #ff4500;}
+#destinMessage {margin-top:20px;font-size:1.5rem;animation: glowText 1.5s infinite alternate;}
+@keyframes glowText {from {text-shadow:0 0 10px #ffd700;} to {text-shadow:0 0 40px #ffd700;}}
+footer {background:#1f2833;padding:30px;text-align:center;color:#ffd700;}
+
+/* Effets de scroll */
+section {opacity:0;transform:translateY(50px);transition: all 0.8s ease;}
+section.show {opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Empire de l'Élu Ultime</h1>
+</header>
+
+<nav>
+<a href="#history">Histoire</a>
+<a href="#gallery">Galerie</a>
+<a href="#destiny">Destin</a>
+<a href="#citizens">Citoyens</a>
+<a href="#faq">FAQ</a>
+</nav>
+
+<!-- Section Histoire -->
+<section id="history">
+<h2>L'Histoire de l'Empire</h2>
+<p>L'Empire de l'Élu Ultime règne sur des terres vastes et mystérieuses. Sa puissance et sa gloire illuminent le monde. Chaque citoyen est invité à découvrir son destin et à rejoindre l'élite.</p>
+<p>Depuis des générations, l'Empire se développe et s'impose comme une force stratégique, invincible et organisée, rassemblant ceux qui aspirent à la grandeur et à la puissance absolue.</p>
+</section>
+
+<!-- Section Galerie -->
+<section id="gallery" class="gallery">
+<h2>Galerie Épique de l'Empire</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Death_Star_-_artist%27s_rendering.jpg/640px-Death_Star_-_artist%27s_rendering.jpg" alt="Étoile de la Mort">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Darth_Vader.jpg/640px-Darth_Vader.jpg" alt="L'Élu Ultime">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Death_Star_trench_run.jpg/640px-Death_Star_trench_run.jpg" alt="Bataille de l'Empire">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Star_Wars_Rebellion_logo.svg/640px-Star_Wars_Rebellion_logo.svg.png" alt="Logo Rébellion">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Star_Wars_Imperial_Fleet.jpg/640px-Star_Wars_Imperial_Fleet.jpg" alt="Flotte Impériale">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Stormtrooper_Marching.jpg/640px-Stormtrooper_Marching.jpg" alt="Soldats de l'Empire">
+</section>
+
+<!-- Section Destin -->
+<section id="destiny" class="destin">
+<h2>Découvre ton Destin</h2>
+<button onclick="revealDestin()">Clique pour ton destin</button>
+<p id="destinMessage"></p>
+</section>
+
+<!-- Section Citoyens -->
+<section id="citizens">
+<h2>Nos Citoyens</h2>
+<p>Rejoindre l'Empire, c'est devenir un membre de l'élite. Chaque citoyen a un rôle stratégique et contribue à la puissance globale de l'Empire.</p>
+<div class="gallery">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Stormtrooper_Marching.jpg/640px-Stormtrooper_Marching.jpg" alt="Citoyen 1">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Imperial_officer.jpg/640px-Imperial_officer.jpg" alt="Citoyen 2">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/TIE_Fighter.jpg/640px-TIE_Fighter.jpg" alt="Citoyen 3">
+</div>
+</section>
+
+<!-- Section FAQ -->
+<section id="faq">
+<h2>FAQ – Empire de l'Élu Ultime</h2>
+<p><strong>Q :</strong> Comment rejoindre l'Empire ?</p>
+<p><strong>R :</strong> Clique sur le bouton “Découvre ton Destin” et suis les instructions pour rejoindre l'élite.</p>
+<p><strong>Q :</strong> L'Empire est-il ouvert à tous ?</p>
+<p><strong>R :</strong> Oui, mais seuls les plus courageux et déterminés trouveront leur place.</p>
+</section>
+
+<footer>
+&copy; 2025 Empire de l'Élu Ultime | Site ultra-complet officiel
+</footer>
+
+<script>
+// Messages destin
+const messages = [
+"Ton destin est glorieux ! 🏆",
+"La puissance coule en toi ! ⚡",
+"Bienvenue dans l'élite ! 👑",
+"Le monde t'appartient ! 🌍",
+"L'Empire t'accueille ! 🔥",
+"La force est avec toi ! ✨",
+"Tu es fait pour gouverner ! 🛡️"
+];
+function revealDestin() {
+document.getElementById('destinMessage').textContent = messages[Math.floor(Math.random() * messages.length)];
+}
+
+// Animation scroll sections
+const sections = document.querySelectorAll('section');
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if(entry.isIntersecting){entry.target.classList.add('show');}
+});
+},{threshold:0.2});
+sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
